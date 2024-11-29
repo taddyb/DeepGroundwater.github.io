@@ -6,31 +6,26 @@ repo_name: deepgroundwater/DeepGroundwater.github.io
 
 theme:
   name: material
-
   features:
-    - navigation.instant
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
     - search.suggest
-
   icon:
     repo: fontawesome/brands/github
-
   palette:
     - scheme: default
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
-
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-
     - scheme: slate
       toggle:
         icon: material/brightness-4
@@ -44,3 +39,5 @@ nav:
   - Home: index.md
   - Blog:
      - blog/index.md
+  - Roadmap: 
+    - roadmap/index.md
