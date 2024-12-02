@@ -18,6 +18,8 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
+      - name: Setup custom domain
+        run: echo "deepgroundwater.com" > CNAME
       - run: pip install git+https://taddyb:${{ secrets.GHCR_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install pillow cairosvg mkdocs-git-committers-plugin mkdocs-material-extensions mkdocs-git-authors-plugin mkdocs-git-revision-date-localized-plugin
       - run: mkdocs build
