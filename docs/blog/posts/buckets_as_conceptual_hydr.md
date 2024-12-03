@@ -2,8 +2,7 @@
 date:
   created: 2024-12-02
 authors:
-  - jmframe (Jonathan M. Frame)
-  - yournamehere
+  - jmframe
 ---
 
 # Buckets as a hydrologic conceptualization 
