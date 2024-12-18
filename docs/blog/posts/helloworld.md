@@ -7,8 +7,6 @@ authors:
 
 # Welcome to DeepGroundwater
 
-We hope that you can use this site to share open-source academic research
-<!-- more -->
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.
+Thinking profoundly
+and sharing code with the world
+are valued actions
