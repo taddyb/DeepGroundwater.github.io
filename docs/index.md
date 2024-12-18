@@ -15,4 +15,4 @@ DeepGroundwater is managed by the following maintainers:
 - Soelem Aafnan Bhuiyan
 
 ## Contributions
-We welcome contributions from students, professors and industry professionals in the broad range of research related to hydrology and water resources. Contributions should be made by a GitHub pull request. An editorial review is required from at least two members of the board. Note that our editorial review is intended to ensure that the contribution is on brand for DeepGroundWater, and is not intended to ensure scientific rigor.  
+We welcome contributions from students, professors and industry professionals in the broad range of research related to hydrology and water resources. Contributions should be made by a GitHub pull request. An editorial review is required from at least two members of the board. Note that our editorial review is intended to ensure that the contribution is on brand for DeepGroundWater, and is not intended to ensure scientific rigor. 

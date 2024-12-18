@@ -13,21 +13,21 @@ For some reason, much of my recent work keeps coming back to buckets, and re-thi
 
 ## Sir Edmond Leakybucket
 
-When I was first learning differential equations the professor told us a silly story about Sir Edmond LeakingBucket, some ol' timey English royal who had to drink his ale quickly because his ale bucket leaked. I went on to study hydrology, so I've had to think about Sir Edmond now for past fiteen years. I can't escape him. Sometimes he mixes two kinds of ales together, sometimes his ale bucket is more complicated or simpler, but he is always losing his ale. Poor guy. Sir Edmond and his bucket do two important things: 1) gives nice differential equation examples, but more importantly for hydrology 2) Leaking buckets are a primary conceptualization for hydrologic processes. 
+When I was first learning differential equations the professor told us a silly story about Sir Edmond LeakingBucket, some ol' timey English royal who had to drink his ale quickly because his ale bucket leaked. I went on to study hydrology, so I've had to think about Sir Edmond for the past fiteen years. I can't escape him. Sometimes he mixes two kinds of ales together, sometimes his ale bucket is more complicated or simpler, but he is always losing his ale. Poor guy. Sir Edmond and his bucket do two important things: 1) gives nice differential equation examples, but more importantly for hydrology 2) Leaking buckets are a primary conceptualization for hydrologic processes. 
 
-A simple differential equation for the water level in Sir Edmond's bucket is:
+A simple differential equation for the ale level in Sir Edmond's bucket is:
 
 $$
 \frac{dh}{dt} = -k \sqrt{h}
 $$
 
-Where h(t) is the water level in the bucket at time \( t \), k is a proportionality constant that governs the rate of outflow. Its solution through seperation of variables is:
+Where h(t) is the ale at time \( t \), k is a proportionality constant that governs the rate of outflow. Its solution through seperation of variables is:
 
 $$
 h(t) = \left(\sqrt{h_0} - \frac{k}{2}t\right)^2
 $$
 
-Where h_0 is the initial water level in the bucket at time t = 0. This gives us the opportunity to track volumes of water through this bucket, and match the fluxes from the bucket with data collected on real-world hydrological systesm. This is, in a nutshell, the field of computational hydrology, we just need to dress up and add complications to this bucket, and off we go.  
+Where h_0 is the initial ale level in the bucket at time t = 0. This gives us the opportunity to track volumes of ale through this bucket, and match the fluxes from buckets with data collected on real-world hydrological systesm. This is, in a nutshell, the field of computational hydrology, we just need to dress up and add complications to this bucket, and off we go.  
 
 ## A walk through the watershed
 
@@ -75,7 +75,7 @@ One thing we can do with our digital buckets is use these simple concepts to exp
 But perhaps, developing educational material off of faulty conceptualizations further perpetuates the misconception, and we could do better by avoiding the analogy altogether. Instead, we might focus on directly engaging with the underlying physical principles and mathematical descriptions of hydrological systems. By prioritizing frameworks that capture the complexities of real-world processes, such as conservation laws and scale-dependent behaviors, we can provide learners with a more accurate and transferable understanding of hydrological dynamics. This approach encourages critical thinking and a deeper appreciation of the challenges in modeling complex environmental systems.
 
 ## Buckets all the way down
-It has been a bit of a joke between me and my hydrology friends (shout out to the editorial board of this blog!) that everything just becomes a bucket, if you think about it long enough. There are a few analogies that we can use to represent many processes in the naturual world. Buckets and harmonic oscillators are just a few examples. They are ubiquitus with dynamic systems. They represent a convenient unit that we can manipulate and modify to study complex behaviors in an otherwise overwhelming system. When we boil systems down to these analogies we are playing around with ideas to help make us understand. We'll probably never know how the world actually works, we just don't have the sensory capabilities. Conceptualizations like buckets, oscillators, or reservoirs, help us bridge the gap between abstract mathematics and tangible phenomena. These models allow us to test theories, communicate ideas, and develop computational tools that extend our understanding of the natural world.
+It has been a bit of a joke between me and my hydrology friends (shout out to the editorial board of this blog!) that everything just becomes a bucket, if you think about it long enough. There are a few analogies that we can use to represent many processes in the naturual world. Buckets and harmonic oscillators are just a two examples. They are ubiquitus with dynamic systems. They represent a convenient unit that we can manipulate and modify to study complex behaviors in an otherwise overwhelming system. When we boil systems down to these analogies we are playing around with ideas to help make us understand. We'll probably never know how the world actually works, we just don't have the sensory capabilities. Conceptualizations like buckets, oscillators, or reservoirs, help us bridge the gap between abstract mathematics and tangible phenomena. These models allow us to test theories, communicate ideas, and develop computational tools that extend our understanding of the natural world.
 
 The real beauty lies in the interplay between abstraction and application. While we recognize the limitations of these analogies—no bucket, spring, or reservoir can capture the full complexity of a river basin or a turbulent atmosphere—they still provide an essential scaffold for exploration. From conceptual hydrological models to modern machine learning architectures, these analogies offer a common language to connect diverse fields of study, sparking innovation in ways that would be impossible without simplification.  
 
