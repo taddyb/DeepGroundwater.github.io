@@ -5,7 +5,7 @@ authors:
   - jmframe
 ---
 
-# Buckets as a hydrologic conceptualization 
+# Hydrology is flat
 
 "Very clever, Sir Edmond, but it is buckets all the way down!" Said no one, ever.  
 
@@ -65,14 +65,19 @@ But let's take this idea of buckets flowing into each other a bit more seriously
 
 [![Method Discussion](https://github.com/jmframe/nash_cascade_neural_network/blob/main/poster/method_discussion.png?raw=true)](https://github.com/jmframe/nash_cascade_neural_network/blob/main/poster/method_discussion.png?raw=true)
 
-Each individual bucket in our nash cascade neural network behaves like a mass concerving perceptron (Wang et al., 2024). In this scenario, we end up with a model that has the uncanney ability to match a downstream diagnostic variable very well, and we have utilized the hydrologists tool of choice.  
+Each individual bucket in our nash cascade neural network behaves like a mass concerving perceptron (Wang et al., 2024). In this scenario, we end up with a model that has the uncanney ability to match a downstream diagnostic variable very well, and we have utilized the hydrologists tool of choice. But if we look closely, are we not simply re-creating a neural network?  
 
-We've seen overwhelming evidence in the past few decades that neural networks are more accurate at predicting hydrologic responses than the conceptualization of hydrologic systems as buckets. Unless that conceptualization itself can be boosted by a neural network (Shen et al., 2024). What I've always pondered is what would happen if hydrologists acted a bit more like physicists, and rejected demonstratively predictive conceptualizations in favor of those that match observations. There is often a sentiment that the bucket conceptualizations, even as simplifications, are "interpretable", but an interpretation is only usefull if we are honest about them limitations. We still learn the Rayleigh–Jeans law in thermodynamics, but we then understand the limitations of the continuous energy conceptualization and turn to Planck's Law to grasp the quantum reality. We can still learn bucket conceptualizations, but let's not pretend that they are "physical" representations.  
+We've seen overwhelming evidence in the past few decades that neural networks are more accurate at predicting hydrologic responses than the conceptualization of hydrologic systems as buckets (Nearing et al., 2020). Unless that conceptualization itself can be boosted by a neural network (Shen et al., 2024). What I've always pondered is what would happen if hydrologists acted a bit more like physicists, and rejected demonstratively predictive conceptualizations in favor of those that match observations. There is often a sentiment that the bucket conceptualizations, even as simplifications, are "interpretable", but an interpretation is only usefull if we are honest about them limitations. We still learn the Rayleigh–Jeans law in thermodynamics, but we then understand the limitations of the continuous energy conceptualization and turn to Planck's Law to grasp the quantum reality. We can still learn bucket conceptualizations, but let's not pretend that they are "physical" representations.  
 
 ## Buckets as toy models, as an educational tool, and for hypothesis testing
 One thing we can do with our digital buckets is use these simple concepts to explore complex ideas. Since we can easily generate synthetic data and test scenarios (Frame et al., 2023), we can study hydrological systems in a structured way. The Deep Bucket Lab models a ‘leaking bucket’ system to represent hydrological processes. Using synthetic data generated through numerical simulations, it demonstrates how factors like precipitation and bucket characteristics influence water flow dynamics. The lab employs a Long Short-Term Memory (LSTM) network to predict water levels and fluxes based on simulation data. Users can modify the model’s parameters and experiment with different scenarios to explore hydrological process representations and their predictability. Interactive graphs and experiments allow for practical engagement with the concepts. The lab provides a straightforward way to study hydrological systems and apply machine learning techniques to hydrology.  
 
 But perhaps, developing educational material off of faulty conceptualizations further perpetuates the misconception, and we could do better by avoiding the analogy altogether. Instead, we might focus on directly engaging with the underlying physical principles and mathematical descriptions of hydrological systems. By prioritizing frameworks that capture the complexities of real-world processes, such as conservation laws and scale-dependent behaviors, we can provide learners with a more accurate and transferable understanding of hydrological dynamics. This approach encourages critical thinking and a deeper appreciation of the challenges in modeling complex environmental systems.
+
+## Buckets all the way down
+It has been a bit of a joke between me and my hydrology friends (shout out to the editorial board of this blog!) that everything just becomes a bucket, if you think about it long enough. There are a few analogies that we can use to represent many processes in the naturual world. Buckets and harmonic oscillators are just a few examples. They are ubiquitus with dynamic systems. They represent a convenient unit that we can manipulate and modify to study complex behaviors in an otherwise overwhelming system. When we boil systems down to these analogies we are playing around with ideas to help make us understand. We'll probably never know how the world actually works, we just don't have the sensory capabilities. Conceptualizations like buckets, oscillators, or reservoirs, help us bridge the gap between abstract mathematics and tangible phenomena. These models allow us to test theories, communicate ideas, and develop computational tools that extend our understanding of the natural world.
+
+The real beauty lies in the interplay between abstraction and application. While we recognize the limitations of these analogies—no bucket, spring, or reservoir can capture the full complexity of a river basin or a turbulent atmosphere—they still provide an essential scaffold for exploration. From conceptual hydrological models to modern machine learning architectures, these analogies offer a common language to connect diverse fields of study, sparking innovation in ways that would be impossible without simplification.  
 
 ## References
 Acuña Espinoza, E., Loritz, R., Álvarez Chaves, M., Bäuerle, N., and Ehret, U.: To bucket or not to bucket? Analyzing the performance and interpretability of hybrid hydrological models with dynamic parameterization, Hydrol. Earth Syst. Sci., 28, 2705–2719, https://doi.org/10.5194/hess-28-2705-2024, 2024. 
@@ -86,6 +91,8 @@ Frame J. M., Bindas T., Araki R., Rapp J. and Deardorff E. (2024) Synchronizatio
 LibreTexts. (Retrieved 2024). Deriving the Rayleigh-Jeans Radiation Law. Retrieved from https://chem.libretexts.org/Bookshelves/
 
 Nash, J. E., & HRS. (1960). A unit hydrograph study, with particular reference to British catchments. Proceedings of the Institution of Civil Engineers, 17(3), 249-282.
+
+Nearing, G. S., Kratzert, F., Sampson, A. K., Pelissier, C. S., Klotz, D., Frame, J. M., Prieto, C., & Gupta, H. v. (2020). What Role Does Hydrological Science Play in the Age of Machine Learning? Water Resources Research. https://doi.org/10.1029/2020wr028091
 
 Shen, C., Appling, A. P., Gentine, P., Bandai, T., Gupta, H., Tartakovsky, A., ... & Lawson, K. (2023). Differentiable modelling to unify machine learning and physical models for geosciences. Nature Reviews Earth & Environment, 4(8), 552-567.
 
