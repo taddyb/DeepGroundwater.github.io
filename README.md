@@ -8,7 +8,7 @@ The below commands will set up your virtual env and allow you to host this site 
 ```sh
 pip install uv
 uv venv
-venv source 
+source .venv/bin/activate
 uv pip install -e .
 mkdocs serve
 ```
