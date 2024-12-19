@@ -1,6 +1,7 @@
 ---
 date:
   created: 2024-12-02
+  updated: 2024-12-19
 authors:
   - jmframe
 ---
@@ -29,9 +30,11 @@ $$
 
 Where h_0 is the initial ale level in the bucket at time t = 0. This gives us the opportunity to track volumes of ale through this bucket, and match the fluxes from buckets with data collected on real-world hydrological systesm. This is, in a nutshell, the field of computational hydrology, we just need to dress up and add complications to this bucket, and off we go.  
 
+<!-- more -->
+
 ## A walk through the watershed
 
-Going back again to undergraduate, I was building my first watershed model (Frame, 2010). I spend weeks staring at a computer screed, writing code, processing data, and thinking through discretization of Sir Edmond's ale bucket. I went out to do some field work for a different project in the Carmel River Watershed, a valley I've been to a dozen times. But after spending so much time thinking about this watershed digitally, well really just a digital bucket representing the watershed, a sense of dred came over me as I looked down the Carmel Valley (Figured below). I was realizing how much my precious computer model was missing, seeing the errors in my assumptions, the variety of vegetation in areas my models represents as homogeneous, the property boundaries with drainage features. Nothing in the analog system seemed to match my digitization. There is overwhelming complexity in every watershed, river reach and hillslope, if our eyes are open.  
+Going back again to undergraduate, I was building my first watershed model (Frame, 2010). I spend weeks staring at a computer screen, writing code, processing data, and thinking through discretization of Sir Edmond's ale bucket. I went out to do some field work for a different project in the Carmel River Watershed, a valley I've been to a dozen times. But after spending so much time thinking about this watershed digitally, well really just a digital bucket representing the watershed, a sense of dred came over me as I looked down the Carmel Valley (Figured below). I was realizing how much my precious computer model was missing, seeing the errors in my assumptions, the variety of vegetation in areas my models represents as homogeneous, the property boundaries with drainage features. Nothing in the analog system seemed to match my digitization. There is overwhelming complexity in every watershed, river reach and hillslope, if our eyes are open.  
 
 <p align="center">
   <img src="pics/jmframe_dampoint.jpg" alt="jmframe in the field, Carmel River Watershed, 2010" width="300"/>
@@ -98,7 +101,3 @@ Shen, C., Appling, A. P., Gentine, P., Bandai, T., Gupta, H., Tartakovsky, A., .
 
 Wang, Y. H., & Gupta, H. V. (2024). Towards interpretable physical‐conceptual catchment‐scale hydrological modeling using the mass‐conserving‐perceptron. Water Resources Research, 60(10), e2024WR037224.
 
-<!-- more -->
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua.

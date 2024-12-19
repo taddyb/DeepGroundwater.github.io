@@ -40,7 +40,10 @@ markdown_extensions:
 
 plugins:
   - search
-  - blog
+  - blog:
+      authors_profiles: true
+      blog_toc: true
+      archive_date_format: yyyy
 
 nav:
   - Home: index.md

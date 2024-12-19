@@ -8,7 +8,7 @@ DeepGroundwater was inspired from the idea that not all research belongs on acad
 
 DeepGroundwater is managed by the following maintainers:
 
-- Tadd Bindas
+- [Tadd Bindas](https://github.com/taddyb)
 - [Jonathan M. Frame](https://github.com/jmframe)
 - Ryoko Araki
 - Jeremy Rapp
