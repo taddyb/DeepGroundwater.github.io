@@ -54,7 +54,7 @@ The physical intuition is 1) the \\( n \\) reservoirs represent sequential stora
 The ultraviolate catastrophy is the result of using harmonic oscillators as conceptual representations of physical systems in Classical Physics. The derevation of the Rayleigh-Jeans Radiation Law (see LibreTexts 2024) is based on these simple conceptual oscillators, but this leads to predicted energy densities that diverged at high frequencies, an issue experimentally inconsistent with observed data.  
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DeepGroundwater/DeepGroundwater.github.io/master/docs/blog/posts/pics/shm.jpg" alt="simple harmonic oscillator from HyperPhysics" width="300"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/shm.gif?raw=true" alt="simple harmonic oscillator from HyperPhysics" width=600"/>
 </p>
 *Image credit: HyperPhysics, ©1998-2020, Department of Physics and Astronomy, Georgia State University.*  
 
