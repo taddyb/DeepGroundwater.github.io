@@ -35,7 +35,7 @@ Where $h_0$ is the initial ale level in the bucket at time $t = 0$. This gives u
 Going back again to undergraduate, I was building my first watershed model (Frame, 2010). I spend weeks staring at a computer screen, writing code, processing data, and thinking through discretization of Sir Edmond's ale bucket. I went out to do some field work for a different project in the Carmel River Watershed, a valley I've been to a dozen times. But after spending so much time thinking about this watershed digitally, well really just a digital bucket representing the watershed, a sense of dred came over me as I looked down the Carmel Valley (Figured below). I was realizing how much my precious computer model was missing, seeing the errors in my assumptions, the variety of vegetation in areas my models represents as homogeneous, the property boundaries with drainage features. Nothing in the analog system seemed to match my digitization. There is overwhelming complexity in every watershed, river reach and hillslope, if our eyes are open.  
 
 <p align="center">
-  <img src="pics/jmframe_dampoint.jpg" alt="jmframe in the field, Carmel River Watershed, 2010" width="300"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/jmframe_dampoint.jpg" alt="jmframe in the field, Carmel River Watershed, 2010" width="300"/>
 </p>
 
 But in hydrology, we consider representing a delayed flow of water as a bucket a type of physical conceptualization. And as a matter of fact, this goes back a long way to Instantaneous Unit Hydrograph (IUH). In my MS level hydrology class, we learned that the IUH from linear reservoirs turns into a beta distribution (Nash 1960). This is a type of theoretical physical understanding of hydrology through buckets.  
@@ -89,7 +89,7 @@ Beven K. (2019) Towards a methodology for testing models as hypotheses in the in
 
 Frame, J. M. (2010). An integrated surface water-groundwater interaction model for the Carmel River. https://digitalcommons.csumb.edu/caps_thes/36/
 
-Frame J. M., L. Hernandez Rodriguez, and M. Bassiouni (2023). "DeepBucketLab - A Playground for Understanding Deep Learning for Hydrologic Process Representations," DOI: 10.5072/zenodo.7349. 10.5281/zenodo.14538195.
+Frame J. M., L. Hernandez Rodriguez, and M. Bassiouni (2023). "DeepBucketLab - A Playground for Understanding Deep Learning for Hydrologic Process Representations," DOI: 10.5281/zenodo.14538195.
 
 Frame J. M., Bindas T., Araki R., Rapp J. and Deardorff E. (2024) Synchronization in hydrologic  processes and modeling the response with concepts, physics and neural networks. ESS Open Archive. DOI: [10.22541/essoar.171320241.14125931/v1](https://doi.org/10.22541/essoar.171320241.14125931/v1)
 
