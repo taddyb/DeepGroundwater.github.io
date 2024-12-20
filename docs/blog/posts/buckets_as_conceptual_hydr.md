@@ -6,9 +6,7 @@ authors:
   - jmframe
 ---
 
-# Hydrology is flat
-
-"Very clever, Sir Edmond, but it is buckets all the way down!" Said no one, ever.  
+# Hydrology is flat, and its buckets all the way down!
 
 For some reason, much of my recent work keeps coming back to buckets, and re-thinking the conceptualization of natural hydrologic systems as buckets. I am generally sick of talking about buckets. I'm hoping that this post is my farewell to thinking about buckets, at least for a while.
 
@@ -22,13 +20,13 @@ $$
 \frac{dh}{dt} = -k \sqrt{h}
 $$
 
-Where h(t) is the ale at time \( t \), k is a proportionality constant that governs the rate of outflow. Its solution through seperation of variables is:
+Where $h(t)$ is the ale at time $t$, k is a proportionality constant that governs the rate of outflow. Its solution through seperation of variables is:
 
 $$
 h(t) = \left(\sqrt{h_0} - \frac{k}{2}t\right)^2
 $$
 
-Where h_0 is the initial ale level in the bucket at time t = 0. This gives us the opportunity to track volumes of ale through this bucket, and match the fluxes from buckets with data collected on real-world hydrological systesm. This is, in a nutshell, the field of computational hydrology, we just need to dress up and add complications to this bucket, and off we go.  
+Where $h_0$ is the initial ale level in the bucket at time $t = 0$. This gives us the opportunity to track volumes of ale through this bucket, and match the fluxes from buckets with data collected on real-world hydrological systesm. This is, in a nutshell, the field of computational hydrology, we just need to dress up and add complications to this bucket, and off we go.  
 
 <!-- more -->
 
@@ -48,7 +46,7 @@ $$
 q(t) = \frac{t^{n-1} e^{-t/k}}{k^n \Gamma(n)}
 $$
 
-Where q(t) is the flow rate at time \( t \), k is the storage coefficient (related to the delay in each reservoir), n is the number of reservoirs (controls the shape of the hydrograph), Gamma(n) is the gamma function.  
+Where $q(t)$ is the flow rate at time $t$, k is the storage coefficient (related to the delay in each reservoir), $n$ is the number of reservoirs (controls the shape of the hydrograph), $\Gamma(n)$ is the gamma function.  
 
 The physical Intuition is 1) the n reservoirs represent sequential storage compartments (or “buckets”) that delay and attenuate flow as water moves downstream, and 2) each bucket’s outflow becomes the inflow for the next, creating a cascade effect that smooths and delays the hydrograph. Hydrologists aren't the only ones to take simple conceptualizations and ask them to simulate complicated physical systems. This is similar to the use of harmonic oscillators in physics.  
 
@@ -62,15 +60,15 @@ Max Planck resolved the ultraviolet catastrophe in 1900 by fundamentally rethink
 
 ## Taking buckets to their limit
 
-The actual physical representation of a mathematical structure of a system of buckets flowing into each other is the correct physical model of one type of system only, and that is, of course, a system of buckets flowing into each other. Applying this model to a watershed, for instance, is similar to using continuous energy waves in the form of harmonic oscillators to model black body radiation. Yes, it will do in some cases, but we know it is not how the real world behaves.  
+A mathematical model of buckets flowing into each other accurately represents one specific system: buckets flowing into each other. However, applying this model to a watershed is an approximation, much like using harmonic oscillators to model blackbody radiation. While it works under certain conditions, we know it’s not a true representation of how the natural world behaves.  
 
-But let's take this idea of buckets flowing into each other a bit more seriously as a representation of hydrologic processes. When I am out on Carmel Valley Road overlooking the watershed, I see depressions, gullies, rills, blades of grass, everything else. All these individual processes do somewhat behave as oddly shaped buckets. A blad of grass, for instance, does collect moisture from the air, and that moisture does flow down the blade. A prarie pothole also fills up and overflows, bucket-like, yet some water flows down through the leaking bottom. Though these are not perfectly round reservoirs with known leaks with known coefficients, they do all sort of flow into each other. I used this idea to try to bring neural networks into hydrology from a more realistic conceptualization. With differentiable modeling (Shen et al., 2023), we can set up our neural network to behave like these systems of buckets, complete with valves on the spigots determining the flow coefficient (weights), and the water level dropping below the spigot shutting off flow completely (activation). What I think we are left with here is a pretty darn good digital interpretation of a messy, complex, heterogeneous system (image below from Frame et al., 2024).  
+But let's take this idea of buckets flowing into each other a bit more seriously as a representation of a fundamental unit process of hydrology. When I am out on Carmel Valley Road overlooking the watershed, I see depressions, gullies, rills, blades of grass, everything else. All these individual processes do somewhat behave as oddly shaped buckets. A blad of grass, for instance, does collect moisture from the air, and that moisture does flow down the blade. A prarie pothole also fills up and overflows, bucket-like, yet some water flows down through the leaking bottom. Though these are not perfectly round reservoirs with known leaks with known coefficients, they do all sort of flow into each other. I used this idea to try to bring neural networks into hydrology from a more realistic conceptualization. With differentiable modeling (Shen et al., 2023), we can set up our neural network to behave like these systems of buckets, complete with valves on the spigots determining the flow coefficient (weights), and the water level dropping below the spigot shutting off flow completely (activation). What I think we are left with here is a pretty darn good digital interpretation of a messy, complex, heterogeneous system (image below from Frame et al., 2024).  
 
 [![Method Discussion](https://github.com/jmframe/nash_cascade_neural_network/blob/main/poster/method_discussion.png?raw=true)](https://github.com/jmframe/nash_cascade_neural_network/blob/main/poster/method_discussion.png?raw=true)
 
-Each individual bucket in our nash cascade neural network behaves like a mass concerving perceptron (Wang et al., 2024). In this scenario, we end up with a model that has the uncanney ability to match a downstream diagnostic variable very well, and we have utilized the hydrologists tool of choice. But if we look closely, are we not simply re-creating a neural network?  
+Each individual bucket in our Nash Cascade Neural Network behaves like a mass concerving perceptron (Wang et al., 2024). In this scenario, we end up with a model that has the uncanney ability to match a downstream diagnostic variable very well, and we have utilized the hydrologists tool of choice. But if we look closely, are we not simply re-creating a neural network? And if so, can we re-think the neural network as a conceptual model?  
 
-We've seen overwhelming evidence in the past few decades that neural networks are more accurate at predicting hydrologic responses than the conceptualization of hydrologic systems as buckets (Nearing et al., 2020). Unless that conceptualization itself can be boosted by a neural network (Shen et al., 2024). What I've always pondered is what would happen if hydrologists acted a bit more like physicists, and rejected demonstratively predictive conceptualizations in favor of those that match observations. There is often a sentiment that the bucket conceptualizations, even as simplifications, are "interpretable", but an interpretation is only usefull if we are honest about them limitations. We still learn the Rayleigh–Jeans law in thermodynamics, but we then understand the limitations of the continuous energy conceptualization and turn to Planck's Law to grasp the quantum reality. We can still learn bucket conceptualizations, but let's not pretend that they are "physical" representations.  
+We've seen overwhelming evidence in the past few decades that neural networks are more accurate at predicting hydrologic responses than the conceptualization of hydrologic systems as buckets (Nearing et al., 2020). The predictive power of bucket-based conceptualizations can themselves be enhanced through integration with neural networks (Shen et al., 2023). So much, in fact, the neural network is more important than the bucket (Acuña Espinoza et al., 2024). What I've always pondered is what would happen if hydrologists simply rejected conceptualizations that are demonstratively poor predictors (i.e., rejected hypotheses; Beven 2018 and 2019), and in their place we embrace the architectures leading to better predictions when compared observations (e.g., neural networks) as a new conceptualization. There is often a sentiment that the bucket conceptualizations, even as simplifications, are "interpretable", but an interpretation is only usefull if we are honest about them limitations. We still learn the Rayleigh–Jeans law in thermodynamics, but we then understand the limitations of the continuous energy conceptualization and turn to Planck's Law to grasp the quantum reality. We can still learn bucket conceptualizations, but let's not pretend that they are "physical" representations. So far we've failed to reject neural networks as hydrology models, can we build our hydrologic conceptualizations around these architectures?  
 
 ## Buckets as toy models, as an educational tool, and for hypothesis testing
 One thing we can do with our digital buckets is use these simple concepts to explore complex ideas. Since we can easily generate synthetic data and test scenarios (Frame et al., 2023), we can study hydrological systems in a structured way. The Deep Bucket Lab models a ‘leaking bucket’ system to represent hydrological processes. Using synthetic data generated through numerical simulations, it demonstrates how factors like precipitation and bucket characteristics influence water flow dynamics. The lab employs a Long Short-Term Memory (LSTM) network to predict water levels and fluxes based on simulation data. Users can modify the model’s parameters and experiment with different scenarios to explore hydrological process representations and their predictability. Interactive graphs and experiments allow for practical engagement with the concepts. The lab provides a straightforward way to study hydrological systems and apply machine learning techniques to hydrology.  
@@ -83,11 +81,15 @@ It has been a bit of a joke between me and my hydrology friends (shout out to th
 The real beauty lies in the interplay between abstraction and application. While we recognize the limitations of these analogies—no bucket, spring, or reservoir can capture the full complexity of a river basin or a turbulent atmosphere—they still provide an essential scaffold for exploration. From conceptual hydrological models to modern machine learning architectures, these analogies offer a common language to connect diverse fields of study, sparking innovation in ways that would be impossible without simplification.  
 
 ## References
-Acuña Espinoza, E., Loritz, R., Álvarez Chaves, M., Bäuerle, N., and Ehret, U.: To bucket or not to bucket? Analyzing the performance and interpretability of hybrid hydrological models with dynamic parameterization, Hydrol. Earth Syst. Sci., 28, 2705–2719, https://doi.org/10.5194/hess-28-2705-2024, 2024. 
+Acuña Espinoza, E., Loritz, R., Álvarez Chaves, M., Bäuerle, N., and Ehret, U. (2024) To bucket or not to bucket? Analyzing the performance and interpretability of hybrid hydrological models with dynamic parameterization, Hydrol. Earth Syst. Sci., 28, 2705–2719, https://doi.org/10.5194/hess-28-2705-2024. 
+
+Beven, K. J. (2018). On hypothesis testing in hydrology: Why falsification of models is still a really good idea. Wiley Interdisciplinary Reviews: Water, 5(3), e1278.
+
+Beven K. (2019) Towards a methodology for testing models as hypotheses in the inexact sciences. Proc. R. Soc. A 475: 20180862. http://dx.doi.org/10.1098/rspa.2018.0862
 
 Frame, J. M. (2010). An integrated surface water-groundwater interaction model for the Carmel River.
 
-Frame J. M., L. Hernandez Rodriguez, and M. Bassiouni (2023). "DeepBucketLab - A Playground for Understanding Deep Learning for Hydrologic Process Representations," DOI: 10.5072/zenodo.7349
+Frame J. M., L. Hernandez Rodriguez, and M. Bassiouni (2023). "DeepBucketLab - A Playground for Understanding Deep Learning for Hydrologic Process Representations," DOI: 10.5072/zenodo.7349. 10.5072/zenodo.7348
 
 Frame J. M., Bindas T., Araki R., Rapp J. and Deardorff E. (2024) Synchronization in hydrologic  processes and modeling the response with concepts, physics and neural networks. ESS Open Archive. DOI: 10.22541/essoar.171320241.14125931/v1
 
