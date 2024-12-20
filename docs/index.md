@@ -10,7 +10,7 @@ DeepGroundwater is managed by the following maintainers:
 
 - [Tadd Bindas](https://github.com/taddyb)
 - [Jonathan M. Frame](https://github.com/jmframe)
-- Ryoko Araki
+- [Ryoko Araki](https://github.com/RY4GIT)
 - Jeremy Rapp
 - Soelem Aafnan Bhuiyan
 
