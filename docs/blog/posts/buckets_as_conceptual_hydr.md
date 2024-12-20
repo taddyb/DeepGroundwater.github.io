@@ -60,7 +60,7 @@ Max Planck resolved the ultraviolet catastrophe in 1900 by fundamentally rethink
 
 ## Taking buckets to their limit
 
-A mathematical model of buckets flowing into each other accurately represents one specific system: buckets flowing into each other. However, applying this model to a watershed is an approximation, much like using harmonic oscillators to model blackbody radiation. While it works under certain conditions, we know it’s not a true representation of how the natural world behaves.  
+The mathematical structure of a system of buckets flowing into each other is the correct physical model of one type of system only, and that is, of course, a system of buckets flowing into each other. However, applying this model to a watershed is an approximation, much like using harmonic oscillators to model blackbody radiation. While it works under certain conditions, we know it’s not a true representation of how the natural world behaves.  
 
 But let's take this idea of buckets flowing into each other a bit more seriously as a representation of a fundamental unit process of hydrology. When I am out on Carmel Valley Road overlooking the watershed, I see depressions, gullies, rills, blades of grass, everything else. All these individual processes do somewhat behave as oddly shaped buckets. A blad of grass, for instance, does collect moisture from the air, and that moisture does flow down the blade. A prarie pothole also fills up and overflows, bucket-like, yet some water flows down through the leaking bottom. Though these are not perfectly round reservoirs with known leaks with known coefficients, they do all sort of flow into each other. I used this idea to try to bring neural networks into hydrology from a more realistic conceptualization. With differentiable modeling (Shen et al., 2023), we can set up our neural network to behave like these systems of buckets, complete with valves on the spigots determining the flow coefficient (weights), and the water level dropping below the spigot shutting off flow completely (activation). What I think we are left with here is a pretty darn good digital interpretation of a messy, complex, heterogeneous system (image below from Frame et al., 2024).  
 
@@ -89,7 +89,7 @@ Beven K. (2019) Towards a methodology for testing models as hypotheses in the in
 
 Frame, J. M. (2010). An integrated surface water-groundwater interaction model for the Carmel River. https://digitalcommons.csumb.edu/caps_thes/36/
 
-Frame J. M., L. Hernandez Rodriguez, and M. Bassiouni (2023). "DeepBucketLab - A Playground for Understanding Deep Learning for Hydrologic Process Representations," DOI: 10.5072/zenodo.7349. 10.5072/zenodo.7348
+Frame J. M., L. Hernandez Rodriguez, and M. Bassiouni (2023). "DeepBucketLab - A Playground for Understanding Deep Learning for Hydrologic Process Representations," DOI: 10.5072/zenodo.7349. 10.5281/zenodo.14538195.
 
 Frame J. M., Bindas T., Araki R., Rapp J. and Deardorff E. (2024) Synchronization in hydrologic  processes and modeling the response with concepts, physics and neural networks. ESS Open Archive. DOI: [10.22541/essoar.171320241.14125931/v1](https://doi.org/10.22541/essoar.171320241.14125931/v1)
 
