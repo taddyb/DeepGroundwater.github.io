@@ -1,7 +1,7 @@
 ---
 date:
-  created: 2024-12-02
-  updated: 2024-12-19
+  created: 2024-12-20
+  updated: 2024-12-20
 authors:
   - jmframe
 ---
@@ -53,7 +53,9 @@ The physical intuition is 1) the \\( n \\) reservoirs represent sequential stora
 ## Harmonic oscillators
 The ultraviolate catastrophy is the result of using harmonic oscillators as conceptual representations of physical systems in Classical Physics. The derevation of the Rayleigh-Jeans Radiation Law (see LibreTexts 2024) is based on these simple conceptual oscillators, but this leads to predicted energy densities that diverged at high frequencies, an issue experimentally inconsistent with observed data.  
 
-![Simple Harmonic Motion](http://hyperphysics.phy-astr.gsu.edu/hbase/imgmec/shm.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DeepGroundwater/DeepGroundwater.github.io/master/docs/blog/posts/pics/shm.jpg" alt="simple harmonic oscillator from HyperPhysics" width="300"/>
+</p>
 *Image credit: HyperPhysics, ©1998-2020, Department of Physics and Astronomy, Georgia State University.*  
 
 Max Planck resolved the ultraviolet catastrophe in 1900 by fundamentally rethinking the energy distribution, quantizing the energy, allowing the thermodynamic limit to match experimental data, giving evidence that energy in the real world is quantum, rather than continuous. Let's take note of a few important pieces of this success story. In the classical case, the energy was poorly concieved, assuming continuous energy distribution. Physicists knew this because the theory, when taken to the thermodynamic limit, didn't match observation data. This gap between theory and experiment ultimately inspired a revolutionary shift in conceptualization, paving the way for modern quantum mechanics, and improving our understanding of the natural world.  
