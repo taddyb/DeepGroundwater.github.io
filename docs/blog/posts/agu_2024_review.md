@@ -10,7 +10,7 @@ authors:
 
 Two weeks ago, the American Geophysical Union hosted its annual fall meeting in Washington, D.C., with [over 25,000 attendees from 100+ countries](https://www.ncei.noaa.gov/news/agu2024#:~:text=In%20keeping%20with%20the%20theme,Earth%20and%20space%20sciences%20community) present to share their research. Research conversations occurred at posters, sessions, and oddly timed coffee hours during the lulls in programming. Now that my brain and feet have recovered, I want to write about my most significant takeaway from the week and where I predict things will be headed next year. 
 
-<!--more -->
+<!-- more -->
 
 ## Welcome to Open-Access 3.0
 
