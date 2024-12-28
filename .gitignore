@@ -1,2 +1,4 @@
 .venv
 _version.py
+
+*.DS_Store
