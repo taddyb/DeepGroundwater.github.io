@@ -6,18 +6,28 @@ authors:
   - taddyb
 ---
 
-# AGU 2024: What happened and where are we going
+# The Technical side of AGU 2024: What happened and where are we going
 
-Two weeks ago, the American Geophysical Union hosted its annual fall meeting in Washington, D.C., with [over 25,000 attendees from 100+ countries](https://www.ncei.noaa.gov/news/agu2024#:~:text=In%20keeping%20with%20the%20theme,Earth%20and%20space%20sciences%20community) present to share their research. Research conversations occurred at posters, sessions, and oddly timed coffee hours during the lulls in programming. Now that my brain and feet have recovered, I want to write about my most significant takeaway from the week and where I predict things will be headed next year. 
+Two weeks ago, the American Geophysical Union (AGU) hosted its annual fall meeting in Washington, D.C., with [over 25,000 attendees from 100+ countries](https://www.ncei.noaa.gov/news/agu2024#:~:text=In%20keeping%20with%20the%20theme,Earth%20and%20space%20sciences%20community) present to share their research. For those reading who have not been, nor heard of AGU, there are four major themes present:
+- Earth's subsurface
+- Earth's surface
+- The atmosphere
+- Space
+
+With several [sections](https://www.agu.org/learn-about-agu/about-agu/governance/sections) spread across the disciplines. Within each section there are many sessions corresponding to a research topic proposed by a group of scientists. Generally, most scientists submit one abstract to their field of study, and rarely, a second to a different section. At the conference research conversations occurred at posters, sessions, and oddly timed coffee hours during the lulls in programming (had to get my yearly zinger at AGU's coffee policy). Now that my brain, and feet from the 20,000 daily steps, have recovered, I want to write about my most significant takeaway from the week and where I predict things will be headed next year. 
 
 <!-- more -->
 
+##### Author's Note:
+
+For context on my research at the conference, I spent the majority of my week attending sessions in the Atomospheric Sciences, Hydrology, Informatics, and Natural Hazards sections as my work/research involves hydrologic-focused machine learning methods and river routing (spending 80% of my time in Hydrology). I had two eLightning talks about [representing reservoirs within a differentiable muskingum-cunge river routing model](https://agu.confex.com/agu/agu24/meetingapp.cgi/Paper/1705938), and the [Replace and Route NOAA-OWP application](https://agu.confex.com/agu/agu24/meetingapp.cgi/Paper/1699282).
+
 ## Welcome to Open-Access 3.0
 
-My big takeaway was not that AI would be taking [our jobs](https://x.com/ThePrimeagen/status/1870267800230441104) or that there was a new "state-of-the-art" model but that we're entering the next generation of data sharing for model inputs or validation. I don't mean the open access of the final research writeups such as [open access journals](https://www.agu.org/-/media/Files/Publications/WRR_FullyOpenAccess_FAQ.pdf), which is a topic of another blog post, but instead the tools, and services, used to access data from high impact papers to allow for one to reproduce results and/or building on top of existing literature. To put it in a metaphor, if a new research paper is a car, researchers don't want to see it in the showroom but to pop the hood and understand the engine that has the parts they can understand. 
+My big takeaway was not that AI would be taking [our jobs](https://x.com/ThePrimeagen/status/1870267800230441104) or that there was a new "state-of-the-art" model but that we're entering the next generation of data sharing for model inputs or validation. I don't mean the open access of the final research writeups such as [open access journals](https://www.agu.org/-/media/Files/Publications/WRR_FullyOpenAccess_FAQ.pdf), which is a topic of another blog post, but instead the tools, and services, used to access data from high impact papers to allow for one to reproduce results and/or building on top of existing literature. To put it in a metaphor, if a new research paper is a car, researchers don't want to see the showroom model but would rather pop the hood, understand the engine, and see what parts are upgrades from what they already have. 
 
 <p align="center">
-  <img src="pics/open_access_flowchart.png" alt="A flowchart describing the differences between open-access generations" width="500"/>
+  <img src="./pics/open_access_flowchart.png" alt="A flowchart describing the differences between open-access generations" width="500"/>
   <br>
   <em>Figure 1: Evolution of Open-Access generations showing the progression from basic data sharing to standardized formats, and finally to cloud-optimized real-time access.</em>
 </p>
@@ -45,7 +55,7 @@ While I believe I'm the first person to develop a semantic naming structure to d
 
 ## There are a lot of similar ideas... Where will this be going in 2025? Should I get in on Open-Access 3.0?
 
-Given the past as a predictor of the future, I believe Open-Access 3.0 likely mirrors patterns we've seen in developer tools before. Consider the history of IDEs: while many groundbreaking early applications [no longer exist](https://medium.com/@jankammerath/revolutionary-ides-that-shaped-software-development-de45cbb408fe), but their innovations laid the foundation for modern development environments. Some of the novel projects that exist today, like VIM and NeoVIM, were once the same project, but diverged at core points and now exist separatly using different roadmaps. The projects often pull inspiration from one another, but are different entities. At its core, Open-Access 3.0 is straightforward: distributed reads and writes around cloud-optimized datasets. However, as we saw at AGU this year, this simple idea can become complex when datasets expand across spatial and temporal dimensions and increase in parameter count. Each scientist running an experiment is solving similar problems in distinctive ways. Just as the IDE landscape eventually settled into a few dominant platforms while maintaining room for specialized tools, I believe Open-Access 3.0 will follow suit. Some platforms may emerge as standards, particularly for specific scientific domains or data types. However, the diversity of scientific computing needs means there will always be value in creating new approaches. If existing tools don't align with your research requirements—whether it's for watershed modeling, ICESat-2 data querying, or machine learning I/O optimization—the field needs your contribution. So dust off that keyboard and get working! AGU25 abstracts are due in 8 months!
+Given the past as a predictor of the future, I believe Open-Access 3.0 likely mirrors patterns we've seen in developer tools before. Consider the history of IDEs: while many groundbreaking early applications [no longer exist](https://medium.com/@jankammerath/revolutionary-ides-that-shaped-software-development-de45cbb408fe), but their innovations laid the foundation for modern development environments. Some of the novel projects that exist today, like VIM and NeoVIM, were once the same project, but diverged at core points and now exist separatly using different roadmaps. The projects often pull inspiration from one another, but are different entities. At its core, Open-Access 3.0 is straightforward: distributed reads and writes around cloud-optimized datasets. However, as we saw at AGU this year, this simple idea can become complex when datasets expand across spatial and temporal dimensions and increase in parameter count. Just as the IDE landscape eventually settled into a few dominant platforms while maintaining room for specialized tools, I believe Open-Access 3.0 will follow suit. Some platforms may emerge as standards, particularly for specific scientific domains or data types. However, the diversity of scientific computing needs means there will always be value in creating new approaches. If existing tools don't align with your research requirements—whether it's for watershed modeling, ICESat-2 data querying, or machine learning I/O optimization—the field needs your contribution. So dust off that keyboard and get working! AGU25 abstracts are due in 8 months!
 
 ## My prediction for next year
 
