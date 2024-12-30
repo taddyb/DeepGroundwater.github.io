@@ -1,7 +1,7 @@
 ---
 date:
   created: 2024-12-22
-  updated: 2024-12-28
+  updated: 2024-12-30
 authors:
   - taddyb
 ---
@@ -9,12 +9,13 @@ authors:
 # The Technical side of AGU 2024: What happened and where are we going
 
 Two weeks ago, the American Geophysical Union (AGU) hosted its annual fall meeting in Washington, D.C., with [over 25,000 attendees from 100+ countries](https://www.ncei.noaa.gov/news/agu2024#:~:text=In%20keeping%20with%20the%20theme,Earth%20and%20space%20sciences%20community) present to share their research. For those reading who have not been, nor heard of AGU, there are four major themes present:
+
 - Earth's subsurface
 - Earth's surface
 - The atmosphere
 - Space
 
-With several [sections](https://www.agu.org/learn-about-agu/about-agu/governance/sections) spread across the disciplines. Within each section there are many sessions corresponding to a research topic proposed by a group of scientists. Generally, most scientists submit one abstract to their field of study, and rarely, a second to a different section. At the conference research conversations occurred at posters, sessions, and oddly timed coffee hours during the lulls in programming (had to get my yearly zinger at AGU's coffee policy). Now that my brain, and feet from the 20,000 daily steps, have recovered, I want to write about my most significant takeaway from the week and where I predict things will be headed next year. 
+Among these four themes, there are several [sections](https://www.agu.org/learn-about-agu/about-agu/governance/sections), and within each section there are many sessions corresponding to a research topic proposed by a group of scientists. Generally, most scientists submit one abstract to their field of study, and rarely, a second to a different section. At the conference research conversations occurred at posters, sessions, and oddly timed coffee hours during the lulls in programming (had to get my yearly zinger at AGU's coffee policy). Now that my brain, and feet from the 20,000 daily steps, have recovered, I want to write about my most significant takeaway from the week and where I predict things will be headed next year. 
 
 <!-- more -->
 
