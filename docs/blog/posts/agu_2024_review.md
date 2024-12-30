@@ -28,7 +28,7 @@ For context on my research at the conference, I spent the majority of my week at
 My big takeaway was not that AI would be taking [our jobs](https://x.com/ThePrimeagen/status/1870267800230441104) or that there was a new "state-of-the-art" model but that we're entering the next generation of data sharing for model inputs or validation. I don't mean the open access of the final research writeups such as [open access journals](https://www.agu.org/-/media/Files/Publications/WRR_FullyOpenAccess_FAQ.pdf), which is a topic of another blog post, but instead the tools, and services, used to access data from high impact papers to allow for one to reproduce results and/or building on top of existing literature. To put it in a metaphor, if a new research paper is a car, researchers don't want to see the showroom model but would rather pop the hood, understand the engine, and see what parts are upgrades from what they already have. 
 
 <p align="center">
-  <img src="./pics/open_access_flowchart.png" alt="A flowchart describing the differences between open-access generations" width="500"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/open_access_flowchart.png?raw=true" alt="A flowchart describing the differences between open-access generations" width="500"/>
   <br>
   <em>Figure 1: Evolution of Open-Access generations showing the progression from basic data sharing to standardized formats, and finally to cloud-optimized real-time access.</em>
 </p>
