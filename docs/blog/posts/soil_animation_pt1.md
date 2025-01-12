@@ -1,5 +1,5 @@
 ---
-date: 2025-01-11
+date: 2025-01-12
 created: 2025-01-11
 authors:
 - RY4GIT
@@ -7,21 +7,28 @@ authors:
 
 # Soils Animated: Part 1
 
-Animation is a powerful tool for demonstrating concepts. It is engaging, simplifies abstract ideas, and makes them accessible to a wide audience.
+Animation is a powerful tool for demonstrating scientific concepts. It is engaging, simplifies abstract ideas, and makes them accessible to a wide audience.
 
-In this blog post, I'll animate a simple soil dynamics model developed by Laio et al. (2001) and Rodriguez-Iturbe et al. (1999), with Part 1 focusing on the basic concepts. I like this model because it helps us conceptualize soil hydrologic system at the field scale with a small number of key variables. 
+In hydrology, one of the most simple yet elegant conceptualization of soil-water dynamics is the **soil moisture loss function**, a model developed by Laio et al. (2001) and Rodriguez-Iturbe et al. (1999). This model abstract complex soil processes at the field scale into a few key variables, providing ecohydrologists with a powerful 'toy model' for conducting a variety of interesting experiments. For example, Entekhabi and Rodriguez-Iturbe (1994) explored the impacts of spatio-temporal aggregation on characterizing heterogeneity of soil moisture dynamics. D'Odorico and Porporato (2004) used it to explain soil moisture seasonality.  
+
+In this blog post, I'll animate this soil dynamics model, with Part 1 focusing on the basic concepts. 
+Animations in this blog post will illustrate how hydrologists conceptualize the soil processes happening just above and beneath our feet, 
+while also exploring how these processes unfolds across different conceptual spaces. 
 
 <!-- more -->
-Over the years, this 'toy model' has been appreciated by ecohydrologists and used for many interesting experiments. For example, Entekhabi and Rodriguez-Iturbe (1994) explored the impacts of spatio-temporal aggregation on characterizing heterogeneity of sol moisture dynamics. D'Odorico and Porporato (2004) used it to explain soil moisture seasonality.  
 
 
 ## Soil Moisture Loss Function to Describe the Dynamics
-The model is called the soil moisture loss function, that relates the rate of loss from soil volume ($-\frac{d\theta}{dt}$) at a given soil moisture level ($\theta$). It is a type of Storage-Flux relation model in Hydrology, linking how Fluxes (in this case, drainage and evapotranspiration) are regulated by Storage (soil moisture) availability. The model describes two key stages: **Drainage** and **Evapotranspiration** (note: For simplicity, hygroscopic water are neglected in this blog post).
+The soil moisture loss function (Laio et al., 2001);Rodriguez-Iturbe et al., 1999) relates the rate of loss from soil volume ($-\frac{d\theta}{dt}$) at a given soil moisture level ($\theta$). It is a type of Storage-Flux relation model in Hydrology, linking how Fluxes (in this case, drainage and evapotranspiration) are regulated by Storage (soil moisture) availability. The model describes two key stages: **Drainage** and **Evapotranspiration** (note: For simplicity, hygroscopic water are neglected in this blog post).
 
 ### Drainage Stage 
 Imagine the soil after a rainstorm. Immediately after rainfall ceases, soil is saturated or extremely wet—if you step on it, it is muddy and squishy. In this state, both soil macropores and micropores are filled with water, and water in the macropores drains quickly due to gravity. Some water may also run off the surface. The first stage of the loss function represents this state, and this rapid processes are expressed as an exponential function. 
 
-![Alt text](.\pics\soil_drainage.gif "Drainage")
+<p align="center">
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_drainage.png?raw=true" alt="An animation illustrating the soil moisture loss function and the corresponding drydown curve during the Drainage stage" width="500"/>
+  <br>
+  <em>Figure 1: Simulated soil moisture dynamics during the Drainage stage in two different conceptual spaces. </em>
+</p>
 
 
 ### Evapotranspiration Stage
@@ -29,7 +36,11 @@ After a few days, the soil transitions to a semi-dry state—it still feels mois
 
 In this stage, the dominant flux is evapotranspiration (ET). Initially, when the soil is wet, ET occurs at its maximum rate because plant stomata are fully, open, and the transpiration process reaches its maximum rate (note: though evaporation can continue independently; Krell et al., 2021). As the soil dries, a critical soil moisture threshold $\theta^*$ is reached, where plants begin to experience water stress. Below that point, ET decreases proportionally with soil moisture level (although this can be nonlinear; Araki et al., 2024). These ET dynamics are represented by the piecewise-linear function in the loss function space. This is much slower process compared to the Drainage, as you can see below: 
 
-![Alt text](.\pics\soil_ET.gif "ET")
+<p align="center">
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_ET.png?raw=true" alt="An animation illustrating the soil moisture loss function and the corresponding drydown curve during the Evapotranspiration stage" width="500"/>
+  <br>
+  <em>Figure 2: Simulated soil moisture dynamics during the Evapotranspiration stage in two different conceptual spaces. </em>
+</p>
 
 ## Usefulness of the Soil Moisture Loss Function
 This loss function model treats soil volume as a system responding to pulse inputs of rainfall (which I plan to elaborate on and animate in Part 2). The model describes how soil responds in a prescribed manner based on the combination of its physical properties, external forcing, and current  state. The drydown curve is the realization of the system partially activated by a rainfall pulse. 
@@ -45,11 +56,19 @@ One of the biggest advantages of moving between these spaces is dealing with unc
 
 In system space (loss function), both the x- and y-variables are subject to observation errors in $\theta$, making it prone to uncertainties. The animation below shows how Gaussian noise in the sample observation points  impacts loss estimates. This situation calls for bivariate analysis but they are more difficult to implement. One of the ways to deal with the bivariate uncertainties is to use the Bayesian approaches as implemented by Bassiouni et al., (2020).
 
-![Alt text](.\pics\soil_est_ver1.gif "soil_est_v1")
+<p align="center">
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_est_v1.png?raw=true" alt="An animation illustrating how estimating the loss function from the drydown can be impacted by noise" width="500"/>
+  <br>
+  <em>Figure 3: Estimating the soil moisture loss function from a sample point with Gaussian noise, from the loss function space. </em>
+</p>
 
 In the observable space (which is the analytical solution of the loss function), the x-variable becomes sampling timing—a deterministic quantity. This reduces uncertainty to just the y-variable ($\theta$), allowing the application of the simpler nonlinear least-squares fitting.
 
-![Alt text](.\pics\soil_est_ver2.gif "soil_est_ver2")
+<p align="center">
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_est_v2.png?raw=true" alt="An animation illustrating how estimating the loss function from the drydown can be impacted by noise" width="500"/>
+  <br>
+  <em>Figure 4: Estimating the soil moisture loss function from a sample point with Gaussian noise, from the drydown space. </em>
+</p>
 
 ## The Power of the Animation
 Science requires abstraction of processes, and we use models for that purpose. With the use of animation, we can easily visualize the model behavior and visualize more abstracted spaces. Animation helps us to wrap around our head to move between observation space and theoretical spaces, just like the drydown space and the loss function space. 
