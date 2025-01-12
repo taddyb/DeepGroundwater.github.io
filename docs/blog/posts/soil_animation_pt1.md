@@ -27,7 +27,7 @@ Imagine the soil after a rainstorm. Immediately after rainfall ceases, soil is s
 ### Evapotranspiration Stage
 After a few days, the soil transitions to a semi-dry state—it still feels moist to the touch, but no water seeps out. At this point, water in the soil macropores are mostly drained, and water is held against gravity in the soil micropores due to soil suction forces.
 
-In this stage, the dominat flux is evapotranspiration (ET). Initially, when the soil is wet, ET occurs at its maximum rate because plant stomata are fully, open, and the transpiration process reaches its maximum rate (note: though evaporation can continue independently; Krell et al., 2021). As the soil dries, a critical soil moisture threshold $\theta^*$ is reached, where plants begin to experience water stress. Below that point, ET decreases proportionally with soil moisture level (although this can be nonlinear; Araki et al., 2024). This ET dynamics are represented by the piecewise-linear function in the loss function space. This is much slower process compared to the Drainage, as you can see below: 
+In this stage, the dominant flux is evapotranspiration (ET). Initially, when the soil is wet, ET occurs at its maximum rate because plant stomata are fully, open, and the transpiration process reaches its maximum rate (note: though evaporation can continue independently; Krell et al., 2021). As the soil dries, a critical soil moisture threshold $\theta^*$ is reached, where plants begin to experience water stress. Below that point, ET decreases proportionally with soil moisture level (although this can be nonlinear; Araki et al., 2024). These ET dynamics are represented by the piecewise-linear function in the loss function space. This is much slower process compared to the Drainage, as you can see below: 
 
 ![Alt text](.\pics\soil_ET.gif "ET")
 
@@ -37,13 +37,13 @@ This loss function model treats soil volume as a system responding to pulse inpu
 Because the loss function is an ordinary differential equation (ODE), we can transition between two perspectives. 
 
 
-1. **System Space (Left panels in the above animations)**: represents general patterns of the soil system, i.e., loss function. 
+1. **System Space (Left panels in the above animations)**: represents general patterns of the soil system, i.e., the loss function. 
 
-2. **Observable Space (Right panels in the above animations)**: describes  soil moisture drying behavior, which are measurable with sensors. This drydown model is the analytical solution of the loss function ODE.
+2. **Observable Space (Right panels in the above animations)**: describes soil moisture drying behavior, which are measurable with sensors. This drydown model is the analytical solution of the loss function ODE.
 
-One of the biggest advantages of moving between these spaces is dealing with uncertinties in model estimation. 
+One of the biggest advantages of moving between these spaces is dealing with uncertainties in model estimation. 
 
-In system space (loss function), both the x- and y-variables are subject to observation errors in $\theta$, making it prone to uncertinties. The animation below shows how Gaussian noise in the sample observation points  impacts loss estimates. This situation calls for bivariate analysis but they are more difficult to implement. One of the ways to deal with the bivariate uncertinties is to use the Bayesian approaches as implemented by Bassiouni et al., (2020).
+In system space (loss function), both the x- and y-variables are subject to observation errors in $\theta$, making it prone to uncertainties. The animation below shows how Gaussian noise in the sample observation points  impacts loss estimates. This situation calls for bivariate analysis but they are more difficult to implement. One of the ways to deal with the bivariate uncertainties is to use the Bayesian approaches as implemented by Bassiouni et al., (2020).
 
 ![Alt text](.\pics\soil_est_ver1.gif "soil_est_v1")
 
@@ -51,12 +51,12 @@ In the observable space (which is the analytical solution of the loss function),
 
 ![Alt text](.\pics\soil_est_ver2.gif "soil_est_ver2")
 
-## Power of the Animation
+## The Power of the Animation
 Science requires abstraction of processes, and we use models for that purpose. With the use of animation, we can easily visualize the model behavior and visualize more abstracted spaces. Animation helps us to wrap around our head to move between observation space and theoretical spaces, just like the drydown space and the loss function space. 
 
-Platforms like this DeepGroundwater enable us to share these visualizations (a shameless plug)! While animations are difficult to include in traditional scientific formats like PDFs, this platform freely accommodates images, animations, videos, and even JavaScript animations to share ideas. We welcome scientific & artistic contributions here.
+Platforms like DeepGroundwater enable us to share these visualizations (a shameless plug)! While animations are difficult to include in traditional scientific formats like PDFs, this platform freely accommodates images, animations, videos, and even JavaScript animations to share ideas. We welcome scientific & artistic contributions here.
 
-Part 2 of this blog post will explore the challenges of using this soil moisture loss function model—which is ultimately a bucket model that is an oversimplification of the reality as pointed out in [our first blogpost](https://deepgroundwater.com/blog/hydrology-is-flat-and-its-buckets-all-the-way-down/). I plan to describe how loss function plays out in longer timeseries with multiple pulse rainfall pulses, and discuss how we may or maynot be able to derive information from it (with animations, of course!). Stay tuned.
+Part 2 of this blog post will explore the challenges of using this soil moisture loss function model—which is ultimately a bucket model that is an oversimplification of the reality as pointed out in [our first blogpost](https://deepgroundwater.com/blog/hydrology-is-flat-and-its-buckets-all-the-way-down/). I plan to describe how loss function plays out in longer timeseries with multiple pulse rainfall pulses, and discuss how we may or may not be able to derive information from it (with animations, of course!). Stay tuned.
 
 ## Code Availability 
 These animations come to life thanks to Python's matplotlib, which you can access the code here: <https://github.com/RY4GIT/drydown-viz>.
