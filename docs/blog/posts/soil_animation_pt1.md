@@ -25,7 +25,7 @@ The soil moisture loss function (Laio et al., 2001);Rodriguez-Iturbe et al., 199
 Imagine the soil after a rainstorm. Immediately after rainfall ceases, soil is saturated or extremely wet—if you step on it, it is muddy and squishy. In this state, both soil macropores and micropores are filled with water, and water in the macropores drains quickly due to gravity. Some water may also run off the surface. The first stage of the loss function represents this state, and this rapid processes are expressed as an exponential function. 
 
 <p align="center">
-  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_drainage.png?raw=true" alt="An animation illustrating the soil moisture loss function and the corresponding drydown curve during the Drainage stage" width="500"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_drainage.gif?raw=true" alt="An animation illustrating the soil moisture loss function and the corresponding drydown curve during the Drainage stage" width="500"/>
   <br>
   <em>Figure 1: Simulated soil moisture dynamics during the Drainage stage in two different conceptual spaces. </em>
 </p>
@@ -37,7 +37,7 @@ After a few days, the soil transitions to a semi-dry state—it still feels mois
 In this stage, the dominant flux is evapotranspiration (ET). Initially, when the soil is wet, ET occurs at its maximum rate because plant stomata are fully, open, and the transpiration process reaches its maximum rate (note: though evaporation can continue independently; Krell et al., 2021). As the soil dries, a critical soil moisture threshold $\theta^*$ is reached, where plants begin to experience water stress. Below that point, ET decreases proportionally with soil moisture level (although this can be nonlinear; Araki et al., 2024). These ET dynamics are represented by the piecewise-linear function in the loss function space. This is much slower process compared to the Drainage, as you can see below: 
 
 <p align="center">
-  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_ET.png?raw=true" alt="An animation illustrating the soil moisture loss function and the corresponding drydown curve during the Evapotranspiration stage" width="500"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_ET.gif?raw=true" alt="An animation illustrating the soil moisture loss function and the corresponding drydown curve during the Evapotranspiration stage" width="500"/>
   <br>
   <em>Figure 2: Simulated soil moisture dynamics during the Evapotranspiration stage in two different conceptual spaces. </em>
 </p>
@@ -57,7 +57,7 @@ One of the biggest advantages of moving between these spaces is dealing with unc
 In system space (loss function), both the x- and y-variables are subject to observation errors in $\theta$, making it prone to uncertainties. The animation below shows how Gaussian noise in the sample observation points  impacts loss estimates. This situation calls for bivariate analysis but they are more difficult to implement. One of the ways to deal with the bivariate uncertainties is to use the Bayesian approaches as implemented by Bassiouni et al., (2020).
 
 <p align="center">
-  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_est_v1.png?raw=true" alt="An animation illustrating how estimating the loss function from the drydown can be impacted by noise" width="500"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_est_ver1.gif?raw=true" alt="An animation illustrating how estimating the loss function from the drydown can be impacted by noise" width="500"/>
   <br>
   <em>Figure 3: Estimating the soil moisture loss function from a sample point with Gaussian noise, from the loss function space. </em>
 </p>
@@ -65,7 +65,7 @@ In system space (loss function), both the x- and y-variables are subject to obse
 In the observable space (which is the analytical solution of the loss function), the x-variable becomes sampling timing—a deterministic quantity. This reduces uncertainty to just the y-variable ($\theta$), allowing the application of the simpler nonlinear least-squares fitting.
 
 <p align="center">
-  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_est_v2.png?raw=true" alt="An animation illustrating how estimating the loss function from the drydown can be impacted by noise" width="500"/>
+  <img src="https://github.com/DeepGroundwater/DeepGroundwater.github.io/blob/master/docs/blog/posts/pics/soil_est_ver2.gif?raw=true" alt="An animation illustrating how estimating the loss function from the drydown can be impacted by noise" width="500"/>
   <br>
   <em>Figure 4: Estimating the soil moisture loss function from a sample point with Gaussian noise, from the drydown space. </em>
 </p>
