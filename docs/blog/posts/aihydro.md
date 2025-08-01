@@ -8,7 +8,7 @@ authors:
 
 # Doing AI Hydrology to assess water resources for AI expansion... to continue doing AI Hydrology
 
-In January (2025), the [Stargate project](https://openai.com/index/announcing-the-stargate-project/) was annunced by the president of the United States, which will be a $500 billion investment over the next four years building new AI infrastructure. 
+In January (2025), the [Stargate project](https://openai.com/index/announcing-the-stargate-project/) was announced by the president of the United States, which will be a $500 billion investment over the next four years building new AI infrastructure. 
 
 In 1956, we introduced the National Interstate and Defense Highways Act (NIDHA) with an authorization of $25 billion (equivalent to $215 billion in 2024). The typical take on the NIDHA is that it facilitated an economic growth, national security and personal mobility. Another take, however, is that the highways destroyed American cities, segregated economic classes, and created a mobility barrier requiring a personal automobile. There is no doubt, what-so-ever, that the NIDHA changed American life and culture (for better or for worse...). Shortly after the NIDHA the air quality in Los Angeles reached an all time low, before the Clean Air Act in 1963 set a course for air quality improvement. Along with the Clean Water Act and the Endangered Species Act, these regulations are largely responsible for any protections we have against corporate pillaging of the environment.
 
