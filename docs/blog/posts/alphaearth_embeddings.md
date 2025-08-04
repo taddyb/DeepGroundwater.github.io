@@ -1,8 +1,9 @@
 ---
 date:
-created: 2025-08-03
+  created: 2025-08-03
+  updated: 2025-08-04
 authors:
-- Rappjer1
+  - rappjer1
 ---
 
 # AlphaEarth Foundation Satellite Embeddings 
