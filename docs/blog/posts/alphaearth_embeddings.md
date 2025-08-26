@@ -6,18 +6,27 @@ authors:
   - rappjer1
 ---
 
-# AlphaEarth Foundation Satellite Embeddings 
+# AlphaEarth Foundation Satellite Embeddings
 
+> “AlphaEarth Foundations provides a powerful new lens for understanding our planet by solving two major challenges: data overload and inconsistent information.” — from the “How AlphaEarth Foundations Works” section of the [DeepMind post](https://deepmind.google/discover/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/).
 
-“AlphaEarth Foundations provides a powerful new lens for understanding our planet by solving two major challenges: data overload and inconsistent information.” This sentence being the first sentence in the “How AlphaEarth Foundations Works” section of the [deepmind post]((https://deepmind.google/discover/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/)) revealing the aforementioned product to the world. I think the most important word in that sentence is **“lens”** because that is exactly what this product appears to be. 
+The key word is **lens**. That is what this product appears to be.
 
-Before we look at the embeddings lets look at the literal spatial foundation used to build them. Here is a yearly Red, Green, and Blue composite from Sentinel-2 L1C which matches the resolution (10m) of the AEF embeddings.   
-<image of RGB image of Michigan, sentinel next to embeddings> 
+Before we look at the embeddings, let’s look at the spatial foundation used to build them. Here is a yearly Red, Green, and Blue composite from Sentinel-2 L1C that matches the 10 m resolution of the AEF embeddings.
 
-This image is what most people imagine when they take a look at satellite imagery, its not too different from what you would see out of a plane window (albeit you may question why your pilot is flying a little too high...). Now, when you first looked at that image I bet you immediately saw features relevant to what your domain of expertise is or if you are familiar with the area you looked at regions you know personally. All of this to say this image, because of what _you know_ is worth more than just the RGB components it is made of.   
+![Sentinel-2 RGB composite of Michigan (2017)](./pics/glbasins_s2_glbasin_filled_mean_2017_blog.png)
 
-This is where we can start to look at the AEF satellite embeddings, which were produced using a model that saught to replicate that understanding by digesting an indiviudally incomprehensible level of information and distilling that into vectors that capture miniscule amounts of human comprehension.  By looking at these different embeddings as we would a Red, Green, Blue (RGB) composite image what we see are the definition of fascinating, largely because we see emergence of phenomenon we know and recognize from our own understanding.  
+This image is what most people imagine when they look at satellite data. It’s not far from a plane window view. When you first looked at it you likely noticed features relevant to your domain or places you know. Because of what _you know_, the image is worth more than its RGB components.
 
-However, with 64 unique embedding layers, looking at every possible RGB combination (n=41,664) would take some time! 
-<Gif of Michigan/GLB>
-Now on the Earth Engine Developers page there are some fantastic [guides on how to use these embeddings classic LULC and remote sensing type tasks](https://developers.google.com/earth-engine/tutorials/community/satellite-embedding-01-introduction). One clear usefulness I see in this is in the similarity search space or using the embeddings visually, exactly as many have used Google Earth and Google Earth Engine for years with high resolution satellite data or products like NAIP, to enhance their geospatial dataset curation/generation/selection to train and validate models with traditional methodology and traditional inputs (e.g. data from Earth Observation Platforms like Landsat and Sentinel). What does concern me though, is the potential for many to just blindly switch over to using these embeddings as if they were their own true bands in an EO platform. The instrumentation on EO platforms are selected based on their theoretical or known relationship to phenomena in the world. The satellite embeddings, while an unprecedented representation of the Earth in a year at a 10m resolution and a consolidation of the electromagnetic spectrum in many ways, are still fundamentally a black box product. While many relationships between phenomena like biomass, crop yield, and many other important characteristics of the landscape will inevitably be made using these embeddings it’s important to consider how we can actually ground those in the scientific laws and understanding that drove the inputs that trained the model in the first place. I hope that this foundation model and others are seen as a reason why we need to maintain programs like Landsat and even produce more EO, more ground validation, and more science in general as the more **lenses** we have to view the world the more complete our understanding of its overall health and ongoing evolution can be.     
+Now to the AEF satellite embeddings. They were produced by a model that sought to replicate that kind of understanding by digesting an individually incomprehensible volume of information and distilling it into vectors that capture small amounts of human-interpretable structure. When we visualize different embeddings as if they were the R, G, and B channels of a composite image, the results are fascinating because recognizable phenomena emerge.
+
+However, with 64 unique embedding layers, checking every possible RGB combination (n = 41,664) would take time.
+
+<video src="./pics/glbasins_embeddings_filled_2017_labeled.mp4" controls muted playsinline style="width:100%;max-width:900px;"></video>
+
+The Earth Engine Developers site has solid [guides on using these embeddings for classic LULC and remote-sensing tasks](https://developers.google.com/earth-engine/tutorials/community/satellite-embedding-01-introduction). One clear use is similarity search and visual exploration, much like how people have used Google Earth, NAIP, and other high-resolution sources to curate training and validation datasets for models built on traditional EO inputs (e.g., Landsat and Sentinel).
+
+A caution: do not treat these embeddings as if they were native sensor bands. EO instruments are chosen for known physical relationships to real-world processes. Embeddings are powerful, but they are still a black-box representation. As relationships to biomass, crop yield, and other variables are reported, we should ground them in the physics and measurements that trained the model. Foundation models should strengthen the case for continuing programs like Landsat and for expanding EO, ground validation, and basic science. The more **lenses** we have, the more complete our understanding of Earth’s condition and change.  
+
+AI Disclaimer: Chatgpt/GPT-5 was used for editing this post and helping with generating some of the visualization pulled from Google Earth Engine. 
+
