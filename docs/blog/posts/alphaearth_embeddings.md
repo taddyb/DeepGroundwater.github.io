@@ -22,7 +22,7 @@ Now to the AEF satellite embeddings. They were produced by a model that sought t
 
 However, with 64 unique embedding layers, checking every possible RGB combination (n = 41,664) would take time.
 
-<video src="./pics/glbasins_embeddings_filled_2017_labeled.gif" controls muted playsinline style="width:100%;max-width:900px;"></video>
+![Embeddings animation](./pics/glbasins_embeddings_filled_2017_labeled.gif)
 
 The Earth Engine Developers site has solid [guides on using these embeddings for classic LULC and remote-sensing tasks](https://developers.google.com/earth-engine/tutorials/community/satellite-embedding-01-introduction). One clear use is similarity search and visual exploration, much like how people have used Google Earth, NAIP, and other high-resolution sources to curate training and validation datasets for models built on traditional EO inputs (e.g., Landsat and Sentinel).
 
